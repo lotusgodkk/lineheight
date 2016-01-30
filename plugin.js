@@ -1,7 +1,7 @@
 ( function() {
 	function addCombo( editor, comboName, styleType, lang, entries, defaultLabel, styleDefinition, order ) {
-		var config = editor.config,style = new CKEDITOR.style( styleDefinition );		
-		var names = entries.split( ';' ),values = [];		
+		var config = editor.config,style = new CKEDITOR.style( styleDefinition );
+		var names = entries.split( ';' ),values = [];
 		var styles = {};
 		for ( var i = 0; i < names.length; i++ ) {
 			var parts = names[ i ];
@@ -26,9 +26,10 @@
 				attributes: { 'aria-label': editor.lang.lineheight.title }
 			},
 			init: function() {
-				this.startGroup(editor.lang.lineheight.title);
+				this.startGroup(editor.lang.lineheight.
+title);
 				for ( var i = 0; i < names.length; i++ ) {
-					var name = names[ i ];					
+					var name = names[ i ];
 					this.add( name, styles[ name ].buildPreview(), name );
 				}
 			},
@@ -64,7 +65,7 @@
 	}
 	CKEDITOR.plugins.add( 'lineheight', {
 		requires: 'richcombo',
-		lang: 'en,fr,es',
+		lang: 'en,fr,es,ar,de,ko,pt-br,pt',
 		init: function( editor ) {
 			var config = editor.config;
 			addCombo( editor, 'lineheight', 'size', editor.lang.lineheight.title, config.line_height, editor.lang.lineheight.title, config.lineHeight_style, 40 );

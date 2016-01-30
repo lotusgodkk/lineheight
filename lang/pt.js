@@ -1,3 +1,3 @@
-CKEDITOR.plugins.setLang('lineheight','af', {
-    title: 'linha Altura'
+CKEDITOR.plugins.setLang('lineheight','pt', {
+    title: 'Altura da Linha'
 } );
