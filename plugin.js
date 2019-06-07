@@ -35,8 +35,10 @@
 			onClick: function( value ) {
 				editor.focus();
 				editor.fire( 'saveSnapshot' );
+				var prevStyle = styles[ this.getValue() ];
+				if (prevStyle != undefined) editor['removeStyle']( prevStyle );
 				var style = styles[ value ];
-				editor[ this.getValue() == value ? 'removeStyle' : 'applyStyle' ]( style );
+				if (style != prevStyle) editor['applyStyle']( style );
 				editor.fire( 'saveSnapshot' );
 			},
 			onRender: function() {
