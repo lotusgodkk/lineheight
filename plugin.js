@@ -67,7 +67,7 @@ title);
 	}
 	CKEDITOR.plugins.add( 'lineheight', {
 		requires: 'richcombo',
-		lang: 'en,fr,es,ar,de,ko,pt-br,pt',
+		lang: 'en,fr,es,ar,de,ko,pt-br,pt,no',
 		init: function( editor ) {
 			var config = editor.config;
 			addCombo( editor, 'lineheight', 'size', editor.lang.lineheight.title, config.line_height, editor.lang.lineheight.title, config.lineHeight_style, 40 );
